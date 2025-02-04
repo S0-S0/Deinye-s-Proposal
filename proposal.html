@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            color: #ff6f61;
+            font-size: 50px;
+        }
+        p {
+            font-size: 20px;
+            color: #555;
+        }
+        .heart {
+            font-size: 70px;
+            color: #ff3366;
+        }
+        .button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #ff3366;
+        }
+        .no-btn {
+            background-color: #ccc;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .grow {
+            transform: scale(1.5);
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hey [Her Name],</h1>
+    <p>I've been thinking about how much you mean to me and I realized that I can't imagine my life without you in it.</p>
+    <p class="heart">❤️</p>
+    <p>So, I have a big question...</p>
+
+    <p><strong>Will you be my girlfriend?</strong></p>
+
+    <div class="buttons">
+        <button class="button" id="yesBtn" onclick="answerYes()">Yes, I will!</button>
+        <button class="no-btn" id="noBtn" onclick="answerNo()">No</button>
+    </div>
+
+    <script>
+        function answerNo() {
+            const noBtn = document.getElementById('noBtn');
+            const yesBtn = document.getElementById('yesBtn');
+            
+            // Hide "No" button and grow "Yes" button
+            noBtn.classList.add('hidden');
+            yesBtn.classList.add('grow');
+        }
+
+        function answerYes() {
+            alert("Yay! You're my girlfriend! 💖");
+        }
+    </script>
+
+</body>
+</html>
